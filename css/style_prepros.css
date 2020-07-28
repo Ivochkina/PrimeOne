@@ -1,0 +1,278 @@
+@import url(../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css);
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&display=swap");
+@import url(media.css);
+@import url(owl.carousel.min.css);
+@import url(owl.theme.default.min.css);
+@import url(animate.min.css);
+@import url(hover.css);
+@import url(style.css);
+@font-face {
+  font-family: 'Akzidenz-Grotesk BQ Condensed';
+  src: url("../fonts/AkzidenzGroteskBQ-BdCnd.eot");
+  src: url("../fonts/AkzidenzGroteskBQ-BdCnd.eot?#iefix") format("embedded-opentype"), url("../fonts/AkzidenzGroteskBQ-BdCnd.woff2") format("woff2"), url("../fonts/AkzidenzGroteskBQ-BdCnd.woff") format("woff"), url("../fonts/AkzidenzGroteskBQ-BdCnd.ttf") format("truetype"), url("../fonts/AkzidenzGroteskBQ-BdCnd.svg#AkzidenzGroteskBQ-BdCnd") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.privat {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .privat {
+      display: flex;
+      flex-direction: column; } }
+  .privat .privat_img {
+    background-image: url("../images/s_p_02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    background-position: center;
+    width: 50%; }
+    @media screen and (max-width: 768px) {
+      .privat .privat_img {
+        width: 100%;
+        padding-bottom: 400px; } }
+  .privat .privat_content {
+    background-color: #000000;
+    padding: 83px 0 90px 60px;
+    width: 50%;
+    height: 100%; }
+    @media screen and (max-width: 768px) {
+      .privat .privat_content {
+        width: 100%; } }
+    .privat .privat_content h2 {
+      font-family: "Akzidenz-Grotesk BQ Condensed";
+      font-size: 50px;
+      color: #FFFFFF;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 40px; }
+    .privat .privat_content p {
+      font-family: "PT Sans", sans-serif;
+      font-size: 15px;
+      line-height: 25px;
+      color: #FFFFFF;
+      font-weight: 400;
+      margin-bottom: 76px; }
+    .privat .privat_content .privat_link_1, .privat .privat_content .privat_link_2 {
+      min-width: 155px;
+      display: inline-block;
+      font-family: "Bebas Neue", cursive;
+      font-size: 15px;
+      line-height: 25px;
+      letter-spacing: 5px;
+      color: black;
+      background-color: #FFFFFF;
+      padding: 20px 35px;
+      font-weight: 600; }
+      .privat .privat_content .privat_link_1 .privat_link_1, .privat .privat_content .privat_link_2 .privat_link_1 {
+        margin-right: 30px;
+        margin-bottom: 20px; }
+
+.menu {
+  max-width: 880px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #FFFFFF;
+  padding: 80px 0; }
+  .menu h3 {
+    margin: 25px 0 40px 5px;
+    font-family: "Akzidenz-Grotesk BQ Condensed";
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 25px;
+    letter-spacing: 2px;
+    font-weight: 500; }
+  .menu p {
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-bottom: 34px;
+    margin-right: 31px; }
+  .menu .menu_link_1 {
+    display: inline-block;
+    background-color: black;
+    color: #FFFFFF;
+    padding: 18px 33px;
+    text-decoration: none;
+    font-family: "Bebas Neue", cursive;
+    font-size: 15px;
+    letter-spacing: 2px; }
+  .menu .menu_link_2 {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-family: "Bebas Neue", cursive;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 3px;
+    margin-top: 33px;
+    font-weight: 600; }
+    .menu .menu_link_2:after {
+      content: "";
+      display: block;
+      width: auto;
+      height: 1px;
+      background-color: #7f7f7f;
+      margin-top: -7px; }
+  .menu .menu_corporat, .menu .menu_privat, .menu .menu_wedding, .menu .menu_online {
+    width: 25%; }
+  @media screen and (max-width: 991px) {
+    .menu .menu_corporat, .menu .menu_privat, .menu .menu_wedding, .menu .menu_online {
+      width: 50%; } }
+  @media screen and (max-width: 768px) {
+    .menu {
+      margin: auto;
+      text-align: center;
+      justify-content: center; } }
+  @media screen and (max-width: 320px) {
+    .menu {
+      text-align: center;
+      justify-content: center; }
+      .menu .menu_corporat, .menu .menu_privat, .menu .menu_wedding, .menu .menu_online {
+        width: 100%; } }
+
+.choose {
+  display: flex;
+  justify-content: space-between; }
+  @media screen and (max-width: 768px) {
+    .choose {
+      flex-direction: column; } }
+  .choose .choose_text {
+    background-color: black;
+    color: #FFFFFF;
+    font-family: "Akzidenz-Grotesk BQ Condensed";
+    font-size: 50px;
+    line-height: 25px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding: 60px 60px 60px 0;
+    width: 50%;
+    text-align: right; }
+    @media screen and (max-width: 768px) {
+      .choose .choose_text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto; } }
+  .choose .choose_img {
+    width: 50%; }
+    @media screen and (max-width: 768px) {
+      .choose .choose_img {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        object-fit: cover; } }
+    .choose .choose_img img {
+      max-width: 100%;
+      height: 100%; }
+
+.about {
+  display: flex;
+  background-color: #ebebeb;
+  padding: 53px 0; }
+  @media screen and (max-width: 768px) {
+    .about {
+      background-color: red;
+      padding: 25px 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center; } }
+
+img {
+  max-width: 100%;
+  margin-right: 10px;
+  margin-bottom: 50px; }
+
+.about_wrap {
+  max-width: 880px;
+  margin: auto; }
+
+.about_flex {
+  display: flex; }
+  @media screen and (max-width: 768px) {
+    .about_flex {
+      padding: 25px 15px;
+      flex-direction: column;
+      justify-content: center; } }
+  .about_flex .about_flex_cont {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    @media screen and (max-width: 320px) {
+      .about_flex .about_flex_cont {
+        width: 100%; } }
+  .about_flex h3 {
+    font-family: "Akzidenz-Grotesk BQ Condensed";
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 25px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 4px; }
+  .about_flex p {
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 500; }
+
+.forms {
+  display: flex; }
+  .forms .map-responsive {
+    position: relative;
+    height: 0; }
+  .forms .form {
+    padding: 50px 0 50px 60px;
+    background-color: black; }
+    .forms .form .form_group {
+      margin-bottom: 25px; }
+    .forms .form input {
+      background-color: transparent;
+      min-width: 373px;
+      padding: 20px 0 17px 23px;
+      border: solid 2px #959595; }
+  .forms textarea {
+    color: #959595;
+    resize: none;
+    height: 95px;
+    background-color: transparent;
+    min-width: 373px;
+    padding: 20px 0 17px 23px;
+    border: solid 2px #959595; }
+  .forms button {
+    padding: 18px 25px;
+    background-color: #FFFFFF;
+    color: black;
+    font-family: "Bebas Neue", cursive;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 3px; }
+
+footer {
+  padding: 44px 0 0 0; }
+  footer h4 {
+    color: #4d4d4d;
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    line-height: 50px;
+    font-weight: 600; }
+  footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 880px;
+    margin: auto; }
+
+/*# sourceMappingURL=style_prepros.css.map */
