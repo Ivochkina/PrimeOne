@@ -18,13 +18,17 @@
   font-weight: bold;
   font-style: normal;
 }
+
 $color: #000000;
 $color-bg: #000000;
 $color-dark: darken($color, 10%);
 $color-lite: lighten($color, 10%);
 @mixin position-center {
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   margin: auto;
 }
 
@@ -73,16 +77,18 @@ header {
 
   padding: 35px 0;
   @include max-screen(991px) {
-    padding:  15px;
+    padding: 15px;
   }
-  .header_top{
+
+  .header_top {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    h4{
-      padding-left: 40px;
+
+    h4 {
+      //padding-left: 40px;
       display: block;
       text-align: center;
       font-size: 8px;
@@ -97,53 +103,83 @@ header {
 
 
     }
-    .header_top_link{
 
-      a{
+    .header_top_link {
+
+      a {
         text-transform: uppercase;
-        font-size: 10px;
-
+        font-size: 12px;
+        margin-right: 20px;
         display: inline-block;
         color: #000000;
         font-family: $ff_Bebas;
         font-weight: 600;
         letter-spacing: 1px;
         text-decoration: none;
-        //margin-left: 20px;
-        //padding: 5px;
+
+
+        &:hover {
+          color: #FFFFFF;
+          background-color: #000000;
+        }
+
+
       }
     }
-    .header_top_online{
-      &:after{
-        content: "";
-        background-color: black;
-        height: 1px;
-        width: 100%;
-        display: inline-block;
-        margin-top: -2px;
-      }
-      a{
+
+    .header_top_online {
+
+
+      a {
+        //padding: 5px;
         font-family: $ff_Akzid;
         font-size: 15px;
         text-transform: uppercase;
         text-decoration: none;
         color: black;
+        border-bottom: solid 1px black;
+
+        &:hover {
+          color: #FFFFFF;
+          background-color: #000000;
+        }
 
       }
     }
   }
-  .menu-toggle{
-    @include min-screen(768px){
-      display: none;
+
+
+
+
+  .contener {
+
+    position: relative;
+    max-width: 880px;
+    margin: auto;
+
+    .link {
+      position: absolute;
+      left: 40%;
+      top: 35%;
+      @include max-screen(767px) {
+        position: absolute;
+        top: 114%;
+        left: 27%;
+
+      }
     }
+    .menu-toggle {
+      @include min-screen(768px) {
+        display: none;
+      }
 
 
       opacity: 1;
       background-color: transparent;
-      position: fixed;
+      position: absolute;
       z-index: 2;
-      top: 50px;
-      left: 15px;
+      top: 30px;
+      left: 0;
       border: none;
       width: 36px;
       height: 30px;
@@ -165,6 +201,7 @@ header {
         transition: opacity 0.2s ease-out,
         width 0.2s 0.2s ease-out;
       }
+
       &:after {
         opacity: 0;
         content: '×';
@@ -177,159 +214,157 @@ header {
         line-height: 0;
         transition: opacity 0.4s ease-out;
       }
+
       &:active {
         transform: translateY(2px);
       }
+
       &:hover {
         opacity: 1;
       }
+
       .open & {
         opacity: 1;
+
         &:before {
           opacity: 0;
           width: 0;
         }
+
         &:after {
           opacity: 1;
-          transform: translate3d(0,0,0)
-          rotate(360deg);
+          transform: translate3d(0, 0, 0) rotate(360deg);
           transition: transform 0.4s 1s ease-out,
           opacity 0.4s 1s ease-out;
         }
       }
 
-  }
-
-
-  .contener {
-
-    position: relative;
-
-    max-width: 880px;
-    margin: auto;
-
-    .link {
-      position: absolute;
-      left: 40%;
-      top: 35%;
-      @include max-screen(767px) {
-        position: absolute;
-        right: 0;
-        bottom: 50%;
-      }
     }
 
-      .burger{
-        li{
-          list-style: none;
-          display: block;
-          a{
-            text-transform: uppercase;
-            font-size: 30px;
-            text-decoration: none;
-            display: inline-block;
-            color: #000000;
-            font-family: $ff_Akzid;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 50px;
-          }
-        }
-        z-index: 1;
-        position: fixed;
-        top: -100%; left: 0;
-        width: 100%;
-        height: 100%;
-        transform: translate3d(0,0,0);
-        backface-visibility: hidden;
-        overflow: hidden;
-        background-color: #ebebeb;
-        &:before {
-          content: '';
-          @include position-center;
-          background: rgba($color-dark, 0.98);
-          width: 100%;
-          height: 0;
-          padding-bottom: 100%;
-          border-radius: 100%;
-          //transform: scale(0.04 ),translateY(9999px);
-          transform: translateY(9999px) scale(0.04);
-          overflow: hidden;
-        }
-        .open & {
-          top: 0;
-          &:before {
-            animation: menu-animation 0.8s ease-out forwards;
-          }
-        }
-        ul.menu2 {
+    .burger {
+      li {
+        list-style: none;
+        display: block;
 
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate3d(-50%,-50%,0);
-          backface-visibility: hidden;
-          //perspective: 1000;
-          color: red;
-          li {
+        a {
+          text-transform: uppercase;
+          font-size: 30px;
+          text-decoration: none;
+          display: inline-block;
+          color: #000000;
+          font-family: $ff_Akzid;
+          font-weight: 600;
+          letter-spacing: 1px;
+          margin-bottom: 50px;
+        }
+      }
+
+      z-index: 1;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      overflow: hidden;
+      background-color: #ebebeb;
+
+      &:before {
+        content: '';
+        @include position-center;
+        background: rgba($color-dark, 0.98);
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        border-radius: 100%;
+        //transform: scale(0.04 ),translateY(9999px);
+        transform: translateY(9999px) scale(0.04);
+        overflow: hidden;
+      }
+
+      .open & {
+        top: 0;
+
+        &:before {
+          animation: menu-animation 0.8s ease-out forwards;
+        }
+      }
+
+      ul.menu2 {
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        backface-visibility: hidden;
+        //perspective: 1000;
+        color: red;
+
+        li {
+          opacity: 0;
+          text-align: center;
+          transform: translate3d(0, 36px, 0);
+
+          &:before {
+            content: '';
+            @include position-center;
+            left: auto;
+            //background-color: turquoise;
+            height: 100%;
+            width: 0;
+            overflow: hidden;
+            transition: width 0.14s ease-out;
+          }
+
+          &:after {
             opacity: 0;
-            text-align: center;
-            transform: translate3d(0,36px,0);
+            content: attr(data-text);
+            @include position-center;
+            color: $color;
+            overflow: hidden;
+            transform: translate(-24px, 6px);
+            transition: transform 0.1s ease-out,
+            opacity 0.1s ease-out;
+          }
+
+          &:hover {
             &:before {
-              content: '';
-              @include position-center;
-              left: auto;
-              //background-color: turquoise;
-              height: 100%;
-              width: 0;
-              overflow: hidden;
-              transition: width 0.14s ease-out;
+              left: 0;
+              right: auto;
+              width: 100%;
             }
+
             &:after {
-              opacity: 0;
-              content: attr(data-text);
-              @include position-center;
-              color: $color;
-              overflow: hidden;
-              transform: translate(-24px, 6px);
-              transition: transform 0.1s ease-out,
-              opacity 0.1s ease-out;
-            }
-            &:hover {
-              &:before {
-                left: 0;
-                right: auto;
-                width: 100%;
-              }
-              &:after {
-                opacity: 1;
-                padding: 0 20px;
-                transform: translate(0px, 6px);
-                transition: transform 0.2s 0.14s ease-out,
-                opacity 0.2s 0.14s ease-out;
-              }
-            }
-            .open & {
               opacity: 1;
-              transform: translate3d(0,0,0);
-              transition: transform 0.2s ease-out,
-              opacity 0.2s ease-out;
-              @for $i from 1 to 7 {
-                &:nth-child(#{$i}) { transition-delay: $i * 0.1s + 0.65s; }
+              padding: 0 20px;
+              transform: translate(0px, 6px);
+              transition: transform 0.2s 0.14s ease-out,
+              opacity 0.2s 0.14s ease-out;
+            }
+          }
+
+          .open & {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+            transition: transform 0.2s ease-out,
+            opacity 0.2s ease-out;
+            @for $i from 1 to 7 {
+              &:nth-child(#{$i}) {
+                transition-delay: $i * 0.1s + 0.65s;
               }
             }
           }
         }
       }
-
-
+    }
 
 
     nav {
       margin-bottom: 40px;
 
 
-      .menu1{
+      .menu1 {
         @include max-screen(767px) {
           display: none;
         }
@@ -353,7 +388,6 @@ header {
           }
 
 
-
           a {
             text-transform: uppercase;
             font-size: 15px;
@@ -375,13 +409,12 @@ header {
       font-family: $ff_Bebas;
       font-weight: 400;
       line-height: 25px;
-      letter-spacing: 2px;
+      letter-spacing: 5px;
       color: #222222;
       @include max-screen(767px) {
         display: none;
       }
     }
-
 
 
   }
@@ -513,15 +546,23 @@ header {
     font-family: $ff_Bebas;
     font-size: 15px;
 
+    &:hover {
+      color: #000000;
+      background-color: #ebebeb;
+    }
+
+
     letter-spacing: 2px;
     @include max-screen(900px) {
-      padding: 18px 33px;
+      padding: 10px 20px;
 
     }
 
   }
 
   .menu_link_2 {
+    padding: 10px 20px;
+
     display: inline-block;
     color: black;
     text-decoration: none;
@@ -531,6 +572,12 @@ header {
     letter-spacing: 3px;
     margin-top: 33px;
     font-weight: 600;
+
+    &:hover {
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+
 
     &:after {
       content: "";
