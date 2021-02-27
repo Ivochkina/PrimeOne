@@ -312,7 +312,7 @@ header {
       margin-bottom: 76px; }
     .privat .privat_content .privat_link_1, .privat .privat_content .privat_link_2 {
       min-width: 155px;
-      display: inline-block;
+      display: block;
       font-family: "Bebas Neue", cursive;
       font-size: 15px;
       line-height: 25px;
@@ -391,7 +391,7 @@ header {
       background-color: #7f7f7f;
       margin-top: -7px; }
   .menu .menu_corporat, .menu .menu_privat, .menu .menu_wedding, .menu .menu_online {
-    width: 25%; }
+    width: 24.5%; }
     @media screen and (max-width: 991px) {
       .menu .menu_corporat, .menu .menu_privat, .menu .menu_wedding, .menu .menu_online {
         width: 50%;
@@ -475,10 +475,14 @@ header {
     margin: auto; }
     @media screen and (max-width: 767px) {
       .about .about_wrap {
-        padding: 30px 15px; } }
+        padding: 30px 15px;
+        display: flex; } }
   .about .about_flex {
     display: flex; }
-    @media screen and (max-width: 735px) {
+    @media screen and (max-width: 414px) {
+      .about .about_flex {
+        flex-direction: column; } }
+    @media screen and (max-width: 767px) {
       .about .about_flex {
         padding: 25px 15px;
         flex-direction: column; } }
